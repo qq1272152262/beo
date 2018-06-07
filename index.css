@@ -1,0 +1,88 @@
+*{
+	margin:0;
+
+
+}
+.bodytop{
+	
+	width: 1024px;
+	height: 100vh;
+	background: #192314
+}
+.bodymiddle{
+	width: 1024px;
+	height: 405px;
+	background: url(img-bg-1350.jpg);
+	background-size: 100% auto;
+	position: relative;
+	}
+.product{
+	overflow: hidden;
+	width: 705px;
+	height: 353px;
+	z-index:100; 
+	position: absolute;
+	bottom:90px;
+	left:150px;
+}
+.product-item{
+
+	float:left;
+	width: 235px;
+	height: 353px;
+	position: relative;
+}
+.product-item img{
+	width: 100%;
+}
+.product-item h4{
+	position: absolute;
+	left:10px;
+	bottom: 310px;
+	color: #fff;
+}
+.left{
+	width: 380px;
+	height: 200px;
+	
+    position: absolute;
+	top: 100px;
+	left: 30px;
+	color: #fff;
+}
+.right{
+	float: right;
+	width: 700PX;
+	height: 465px;
+	background: url("green-beosound-shape-desktop.jpg");
+	background-size: 100% auto;
+
+}
+}
+.a1{
+	height: 30px;	
+	font-size: 0.8em;
+	
+	
+}
+.a2{
+	letter-spacing: 3.75px;
+	height: 80px;	
+	font-size: 3em;
+	
+}
+.a3{
+	height: 45px;	
+	font-size:0.8em；
+}	
+
+.a4{
+	display: block;
+	font-size: 0.8em;
+	width: 290px;
+	line-height: 21px;
+	background-color: rgba(255,255,255,.1);
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+}

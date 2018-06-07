@@ -1,0 +1,91 @@
+1.html标签：
+  属性    放在开始标签中   属性名="属性值" 
+ 
+
+2.创建html主体框架：!+tab
+3.css文件的创建：新建文本文档--改后缀名为css
+  css的语法：
+  选择器{
+     样式名:样式值;
+     样式名:样式值;
+  }
+  在html文件的head部分通过link标签引入css文件：<link rel="stylesheet" href="demo.css">
+
+  
+4.css选择器 
+     名称     css中      html中
+  标签选择器  标签名   <div></div>
+  类名选择器  .类名    <div class="类名"></div>
+  id选择器    #id名    <div id="id名称"></div>
+
+5.文字样式
+color: blue;
+font-size:40px;
+/*文字水平排列方式  left   center    right*/
+/*文字垂直排列  行高：文字所在块元素的高度*/
+
+6.盒子模型
+  1）内容
+     margin  外边距（盒子与盒子之间的距离）
+     border  边框（盒子的边界）
+     padding 内边距（内容与边框之间的距离）
+     width/height   元素本身的宽高
+  2）margin/padding：上 右 下 左;
+     margin-top/margin-bottom/:20px;
+  3）/*边框：边框的大小  边框颜色  边框的样式：solid实线  dashed虚线  dotted点状线*/
+     border: 2px #000 dotted;
+  4）
+  盒子的实际宽=width+左右内边距+左右边框
+  盒子的实际高=heihgt+上下内边距+上下边框
+  5）给元素添加内边距，会撑大盒子，解决办法：
+     a.把宽高减小相应的值；
+     b.box-sizing:border-box;
+
+  6）行内元素只有左右外边距，没有上下外边距；
+  7）块元素在块元素中水平居中：margin:0 auto;
+  8）外边距可以有负值，内边距没有负值；
+  9）*通用选择器    选中页面中所有的标签，清除默认边距
+    *{
+        margin:0;
+        padding:0;
+     } 
+
+
+
+
+
+
+7.标签的分类
+  按照标签在浏览器中的排列方式分类：
+  
+  块元素：在浏览器中从上往下排列，可以设置宽高，如div标签、p标签；
+  行内元素：在浏览器中从左往右排列，不可以设置宽高，如a标签、span标签；
+  行内块元素：在浏览器中从左往右排列，可以设置宽高，如img标签；
+  
+  转化：display:block/inline/inline-block;
+  往往把行内元素和行内块元素转换成块元素，如：img标签转换成块元素，因为有默认边距 
+
+
+8.图片的引入
+  1）在html中通过img标签引入图片；
+  2）在css中通过背景图片的方式引入；
+     步骤：a.设置有宽高的元素；
+           b.通过background-image:url("图片的路径")引入背景图片；
+           c.设置背景图片的大小：background-size:100px 200px(具体数值：宽 高);
+                                                80% 50%（百分比：宽 高）；
+                                                cover（单词：覆盖）；
+                                                contain（单词：包含）；
+           d.设置背景图片的位置：background-position:left/center/right top/center/bottom(单词：水平位置  垂直位置)；
+                                                    10px 20px（数值：图片水平移动的距离  图片垂直移动的距离）向右向下为正;
+           e.背景图片的重复：background-repeat:repeat(重复);
+                                              no-repeat(不重复);
+                            background-repeat-x：no-repeat;
+   区别：
+   1）img方式引入比较局限，只能修改图片大小，背景图片还可以修改其位置
+   使用：
+   如果图片需要经常更换，用img方式引入图片。如果不需要经常更换，用背景图片的方式引入。
+  
+   应用：图片精灵技术/雪碧图   css sprite
+         将网页中的一些小图标整合在一张大图上，通过背景图片引入这张大图，改变背景图片的位置来
+       显示图片上的不同区域，从未提高网页的加载速度。
+       
